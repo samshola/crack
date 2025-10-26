@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 1 Year Anniversary ❤️</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffe6f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+  h1 {
+    text-align: center;
+    color: #ff4081;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #ff4081;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #e73370;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Happy 1 Year Anniversary!</h1>
+  <p>Fill all the boxes to see why I love you ❤️</p>
+
+  <input type="text" placeholder="Your Name" id="name">
+  <input type="text" placeholder="Nickname" id="nickname">
+  <textarea placeholder="A short message for her" id="message"></textarea>
+
+  <button type="button" onclick="checkForm()">See the 12 Reasons ❤️</button>
+</div>
+
+<script>
+function checkForm() {
+  const inputs = document.querySelectorAll('input, textarea');
+  let allFilled = true;
+
+  inputs.forEach(input => {
+    if (input.value.trim() === '') allFilled = false;
+  });
+
+  if (allFilled) {
+    window.location.href = 'reasons.html'; // redirect to reasons page
+  } else {
+    alert('Please fill in all boxes!');
+  }
+}
+</script>
+</body>
+</html>
